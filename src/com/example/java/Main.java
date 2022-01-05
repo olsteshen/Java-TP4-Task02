@@ -5,7 +5,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-
+        Convert conv = new Convert();
         ArrayList<String> alist = new ArrayList<>();
         alist.add("AA");
         alist.add("AA");
@@ -13,14 +13,10 @@ public class Main {
         alist.add("BB");
         alist.add("CC");
         alist.add("CC");
-
-        HashSet<String> hset = new HashSet<>();
-        for(String str :alist){
-           hset.add(str);
-        }
-     //    Set<String> set;
-     //   Collections.addAll(set = new HashSet<String>(Arrays.asList((arr))));
+        alist.add("AA");
+        alist.add("BB");
         System.out.println("Collection with duplicates contains " + alist);
-        System.out.println("Collection without duplicates contains " + hset);
+        HashSet<String> newcol = conv.convert(alist);
+        System.out.println("Collection with duplicates contains " + newcol);
     }
 }
